@@ -174,7 +174,7 @@ interface ValidationResult {
 
       .datepicker__calendar__nav__header__year {
         display: inline-block;
-        width: 3em;
+        width: 4em;
         padding: 2px 4px;
         border: 1px solid #ffffff;
         border-radius: 2px;
@@ -567,7 +567,7 @@ export class DatepickerComponent implements OnInit, OnChanges {
    * @return {Array} The input with the invalid days replaced by 0
    */
   filterInvalidDays(calendarDays: Array<number>): Array<number> {
-    let newCalendarDays = [];
+    let newCalendarDays: any = [];
     calendarDays.forEach((day: number | Date) => {
       if (day === 0 || !this.isDateValid(<Date> day)) {
         newCalendarDays.push(0)
